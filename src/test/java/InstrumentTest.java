@@ -29,6 +29,11 @@ public class InstrumentTest {
         materials.add(Material.COMPOSITE);
         assertEquals(materials, guitar.getMaterial());
         assertEquals(Material.WOOD, baritoneClarinet.getMaterial());
+        String newTuning = "B minor";
+        baritoneClarinet.changeTuning(newTuning);
+        guitar.changeTuning(newTuning);
+        assertEquals(newTuning, baritoneClarinet.getTuning());
+        assertEquals("standard", guitar.getTuning());
     }
 
     @Test

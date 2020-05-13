@@ -18,6 +18,13 @@ public class Guitar extends Instrument implements IPlay, ISell {
         this.materials.add(secondaryMaterial);
     }
 
+    @Override
+    public void changeTuning(String tuning) {
+        if(tuning == "Drop D") {
+            super.changeTuning(tuning);
+        }
+    }
+
     public ArrayList<Material> getMaterial() {
         return this.materials;
     }
